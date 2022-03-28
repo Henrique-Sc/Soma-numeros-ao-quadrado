@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício 02 - Soma de números ao quadrado</title>
+
+	<style type="text/css">
+		body {
+			font-family:  arial;
+		}
+
+		input, button {
+			padding: 5px;
+		}
+
+		#result {
+			font-family: consolas;
+			visibility: hidden;
+		}
+	</style>
+
+	<script>
+		function soma() {
+			var num1 = parseInt(document.getElementById('num1').value);
+			var num2 = parseInt(document.getElementById('num2').value);
+
+			var quadradoNum1 = num1 ** 2;
+			var quadradoNum2 = num2 ** 2;
+			var soma = quadradoNum1 + quadradoNum2;
+
+			document.getElementById('result').style.visibility = 'visible';
+			document.getElementById('mostrarN1').innerHTML = (num1 + '² = ' + quadradoNum1);
+			document.getElementById('mostrarN2').innerHTML = (num2 + '² = ' + quadradoNum2);
+			document.getElementById('mostrarSoma').innerHTML = 'Soma: ' + soma;
+
+		}
+	</script>
+</head>
+<body>
+	<h2>Exercício 02 - Soma de números ao quadrado</h2>
+
+	<form>
+		<label for="num1">1º Número: </label>
+		<input type="number" id="num1" placeholder="Digite aqui">
+		<br><br>
+		<label for="num2">2º Número: </label>
+		<input type="number" id="num2" placeholder="Digite aqui">
+		<br><br>
+	</form>
+
+	<button onclick="soma()">Somar</button>
+
+	<div id="result">
+		<p>-=-=-= Resultado =-=-=-</p>
+		<!-- <p>A soma entre <span></span> (<span></span>) e <span></span> (<span></span> é <span></span></p>
+ -->
+ 		<p id="mostrarN1"></p>
+ 		<p id="mostrarN2"></p>
+ 		<p id="mostrarSoma"></p>
+ 		
+ 		<p>-=-=-=-=-=-=-=-=-=-=-=-</p>
+	</div>
+
+</body>
+</html>
